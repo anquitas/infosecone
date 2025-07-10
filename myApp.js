@@ -11,14 +11,16 @@ let helmet = require('helmet')
 // lesson 2 - hide `X-Powered-By: Express` info
 app.use(helmet.hidePoweredBy({setTo: 'gomu gomu no fake info'}))
 
-// lesson 3 - guarding against 
+// lesson 3 - guarding against framing
 app.use(helmet.frameguard({
   action: 'deny'
   // action: 'sameorigin'
   // action: 'allow-from'
 }))
 
-
+// lesson 4 - Mitigate the Risk of XSS Attacks with `helmet.xssFilter()`
+// XSS -- Cross Site Scripting 
+app.use(helmet.xssFilter())
 
 
 
