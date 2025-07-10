@@ -20,11 +20,10 @@ app.use(helmet.frameguard({
 
 // lesson 4 - Mitigate the Risk of XSS Attacks with `helmet.xssFilter()`
 // XSS -- Cross Site Scripting 
-app.use(helmet.xssFilter())
+app.use(helmet.xssFilter()) // use of it like this later became a vulnerability
 
-
-
-
+// lesson 5 - Avoid Inferring the Response MIME Type with `helmet.noSniff()`
+app.use(helmet.noSniff())
 
 
 
