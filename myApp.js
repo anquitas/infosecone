@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
 
+// lesson 1 - helmet import
 let helmet = require('helmet')
 
-
-
+// lesson 2 - hide `X-Powered-By: Express` info
+app.use(helmet.hidePoweredBy({setTo: 'gomu gomu no fake info'}))
 
 
 
