@@ -1,5 +1,9 @@
+// IMPORT
 const express = require('express');
+// INITS
 const app = express();
+
+
 
 // lesson 1 - helmet import
 let helmet = require('helmet')
@@ -7,8 +11,12 @@ let helmet = require('helmet')
 // lesson 2 - hide `X-Powered-By: Express` info
 app.use(helmet.hidePoweredBy({setTo: 'gomu gomu no fake info'}))
 
-
-
+// lesson 3 - guarding against 
+app.use(helmet.frameguard({
+  action: 'deny'
+  // action: 'sameorigin'
+  // action: 'allow-from'
+}))
 
 
 
