@@ -30,8 +30,11 @@ app.use(helmet.noSniff())
 app.use(helmet.ieNoOpen())
 
 
-
-
+// lesson 7 - Ask Browsers to Access Your Site via HTTPS Only with helmet.hsts()
+// num * dayHour * houtMin * minSec
+var ninetyDaysInSeconds = 90*24*60*60
+app.use(helmet.hsts({maxAge: ninetyDaysInSeconds, force: true}))
+// only via https for a specific duration
 
 
 
