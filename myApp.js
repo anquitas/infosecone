@@ -26,9 +26,8 @@ app.use(helmet.xssFilter()) // use of it like this later became a vulnerability
 app.use(helmet.noSniff())
 
 
-
-
-
+// lesson 6 - Prevent IE from Opening Untrusted HTML with helmet.ieNoOpen()
+app.use(helmet.ieNoOpen())
 
 
 
