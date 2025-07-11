@@ -54,7 +54,14 @@ app.use(helmet.contentSecurityPolicy({
   }
 }))
 
+// lesson 11 - Configure Helmet Using the ‘parent’ helmet() Middleware
+// + a general middleware that includes all other middleware
+// - except `noCache()`, and `contentSecurityPolicy()` 
+// - uses configuration object for options of other mw
+// - if we wanna disable a default active mw, we gotta do it manually
+app.use(helmet({
 
+}))
 
 
 
