@@ -37,6 +37,8 @@ app.use(helmet.hsts({maxAge: ninetyDaysInSeconds, force: true}))
 // only via https for a specific duration
 
 
+// lesson 8 - Disable DNS Prefetching with helmet.dnsPrefetchControl()
+app.use(helmet.dnsPrefetchControl())
 
 
 
