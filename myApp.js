@@ -42,7 +42,8 @@ app.use(helmet.dnsPrefetchControl())
 
 
 
-
+// lesson 9 - Disable Client-Side Caching with helmet.noCache()
+app.use(helmet.noCache())
 
 
 
